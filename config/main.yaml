@@ -1,0 +1,28 @@
+http:
+  port: 80
+  maxHeaderBytes: 1048576
+  readTimeout: 10s
+  writeTimeout: 10s
+
+postgres:
+  username: 'postgres'
+  host: 'localhost'
+  port: '5432'
+  dbname: 'postgres'
+  sslmode: 'disable'
+  password: 'password'
+  schema: 'public'
+  poolMax: 50
+  poolMin: 20
+  healthCheckPeriod: 10s
+  connectionMaxIdleTime: 600s
+  connectionMaxLifeTime: 1800s
+
+internal:
+  path: '/microservices_kafka_project'
+  environment: '.env'
+  logInputParamOnErr: true
+
+jwt:
+  accessTtl: '100h'
+  refreshTtl: '100h'
